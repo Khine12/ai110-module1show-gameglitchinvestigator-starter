@@ -4,20 +4,13 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 
 ## 1. What was broken when you started?
 
-- What did the game look like the first time you ran it?
-- List at least two concrete bugs you noticed at the start  
-  (for example: "the hints were backwards").
-
-**Bug Reproduction Log**
-
-Document at least 3 bugs you found. Add rows as needed.
-
-| Input | Expected Behavior | Actual Behavior | Console Output / Error |
-|-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
-
+| Input Used | Expected Behavior | Actual Behavior | Console Error / Output |
+|---|---|---|---|
+| Guess 88, secret is 50 | "Go Lower" hint | "Go HIGHER" shown | none |
+| Click "New Game" button | Fresh game starts | Nothing happens, must refresh browser | none |
+| Uncheck "Show Hint" box | Hint disappears | Hint stays on screen, persists after refresh | none |
+| Change difficulty to Easy | Range changes to 1-20, 6 attempts | Range stays 1-100, settings ignored | none |
+| Mid-game score in debug panel | Score shows 0 or positive | Score shows -5 (negative) | none |
 ---
 
 ## 2. How did you use AI as a teammate?
