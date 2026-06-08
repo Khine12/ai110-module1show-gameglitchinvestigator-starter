@@ -33,11 +33,12 @@ It wrote the code, ran away, and now the game is unplayable.
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. Start the app with `python -m streamlit run app.py` and open it in the browser. In the sidebar, pick a difficulty — for example **Easy**, which now correctly sets the range to 1–20 with 6 attempts (the info banner reflects the real range, not a hardcoded 1–100).
+2. Open the **Developer Debug Info** panel to see the secret number. Confirm it stays the same across submits and that switching difficulty regenerates a new secret inside the new range.
+3. Make a guess that's too high. The hint now correctly says **"📉 Go LOWER!"**. Make one that's too low and it says **"📈 Go HIGHER!"** — the hints are no longer reversed.
+4. Type something invalid like `abc` and submit. You get an error message and **no attempt is consumed** ("Attempts left" stays the same).
+5. Use the hints to home in on the secret and guess it. The app shows balloons, a win message with your score, and locks the round as "won".
+6. Click **New Game 🔁**. The game fully resets — score back to 0, attempts to 0, a fresh secret in the current range — and is immediately playable again (previously it stayed stuck on the win/loss screen).
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
